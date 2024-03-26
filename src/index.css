@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary: #3b81f6;
+}
+.grid-row-minmax{
+    grid-template-rows:max-content auto;
+}
+
+<<<<<<< HEAD
+=======
+/* table {
+    width: 100%;
+    border: 1px solid #efefef;
+    border-collapse: collapse;
+}
+
+tr{
+    display: flex;
+}
+
+td,th{
+    border: 1px solid #efefef;
+    border-collapse: collapse;
+    padding: 8px;
+    flex: auto;
+    width: 100px;
+    text-align: center;
+}
+
+tr :is(td,th):first-child{
+    width: 40px;
+}
+
+tr :is(td,th):nth-child(2){
+    width: 130px;
+    overflow-y: auto;
+}
+
+tr :is(td):nth-child(2){
+    color: blue;
+    text-decoration: underline;
+} */
+>>>>>>> 9c782e8087b3f5a418b261faee4bcab921130ebf
+.glass {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.primary{
+    background-color: var(--primary);
+    color: #f5f5f5;
+}
+
+.border-primary{
+    border-color: var(--primary);
+}
+
+.border-primary-hover:hover{
+    background-color: var(--primary);
+    color: white;
+    transition: 0.25s ease;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.grid3 {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
