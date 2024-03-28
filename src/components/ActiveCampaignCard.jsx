@@ -25,14 +25,14 @@ const ActiveCampaignCard = ({ data }) => {
         <div className="p-4 space-y-3">
           <div className="">{data.title}</div>
           <div className="w-full bg-gray-200 h-1 overflow-hidden">
-            {/* <div
+            <div
               className="h-1 primary"
-              style={{ width: (raised / data.goalAmount) * 100 + "%" }}
-            ></div> */}
+              style={{ width: (data.raisedAmount / data.goalAmount) * 100 + "%" }}
+            ></div>
           </div>
           <div className="flex items-center">
             <div>
-              <div className="font-semibold text-xl">₹ 0</div>
+              <div className="font-semibold text-xl">₹ {data.raisedAmount}</div>
               <div className="text-sm text-gray-500">
                 funded of ₹ {data.goalAmount}
               </div>
