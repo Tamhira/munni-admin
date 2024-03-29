@@ -7,6 +7,7 @@ import ActiveCampaignCard from "../components/ActiveCampaignCard";
 import { IoReload } from "react-icons/io5";
 
 const ActiveCampaignsPage = () => {
+  const data = useState(null);
   const campaignsRef = collection(database, "campaigns");
   const [campaigns, setCampaigns] = useState([]);
   async function getCampaigns() {
@@ -26,7 +27,7 @@ const ActiveCampaignsPage = () => {
         </div>
         <div className="grid grid-cols-3 gap-3 mb-4 py-2">
           {campaigns.map((item, index) => {
-            return <ActiveCampaignCard data={item.data()} key={index} />;
+            return <ActiveCampaignCard data={item.data()} key={index} id={item.id} />;
           })}
         </div>
 
